@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #2c7c8a;
+  --color-on-primary: #fbfaff;
+  --color-surface: #d0ebf0;
+  --color-bg: #fbfaff;
+  --color-text-primary: #141414;
+  --color-text-secondary: #404343;
+  --color-border: #58777e;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.35) transparent;
+}
+
+#root {
+  @apply w-full h-full;
+}
+
+html,
+body {
+  @apply bg-[var(--color-bg)] text-[var(--color-text)] w-full h-full;
+}
+h1 {
+  @apply text-lg font-bold text-[var(--color-text-primary)];
+}
+p {
+  @apply text-[var(--color-text-secondary)] text-sm;
+}
+
+.react-flow__edges {
+  --xy-edge-stroke-width-default: 2px !important;
+  --xy-edge-stroke-width-selected: 2px !important;
+  --xy-edge-stroke-default: var(--color-border);
+  --xy-edge-stroke-selected: var(--color-primary);
+}
