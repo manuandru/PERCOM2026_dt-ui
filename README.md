@@ -47,3 +47,11 @@ Both attributes and features can contain nested fields. For example:
 - If you want to see one of your smart things in the Map, you can write in the location field the coordinates of the thing in the following format: `latitude,longitude`.
 
 - The model field is used to show the name of the thing.
+
+## Testing with sample data
+
+To run tests with synthetic data:
+
+```bash
+uv run python load_random_to_ditto.py --yes
+```
